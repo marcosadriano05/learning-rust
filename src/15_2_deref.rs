@@ -21,10 +21,11 @@ fn main() {
         }
     }
 
-    impl<T> Deref for MyBox<T> { // implementing Deref trait to allow dereference
+    impl<T> Deref for MyBox<T> {
+        // implementing Deref trait to allow dereference
         type Target = T;
 
-        fn deref(&self) ->&Self::Target {
+        fn deref(&self) -> &Self::Target {
             &self.0
         }
     }
